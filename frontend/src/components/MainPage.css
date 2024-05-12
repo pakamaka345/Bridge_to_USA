@@ -5,9 +5,10 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-radius: 20px;
 }
 .welcome-screen img {
-    
+    opacity: 0.6;
 }
 .welcome-text {
     position: absolute;
@@ -18,3 +19,73 @@
     color: black;
     text-align: center;
 }
+
+
+.contact-form {
+    background-color: #f8f9fa !important;
+    padding-top: 70px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 85%;
+    border-radius: 30px;
+    border: 2px solid purple;
+}
+.contact-form-input {
+    border-radius: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+    width: 80%;
+}
+.contact-form-input-textarea {
+    border-radius: 30px !important;
+    margin-top: 30px !important;
+    padding-top: 10px !important;
+    width: 90%;
+}
+.helper-text {
+    position: absolute;
+    bottom: 115%;
+    left: -10px;
+    color: purple !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+.helper-textarea {
+    position: absolute;
+    bottom: 110%;
+    left: -10px;
+    color: purple !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+.contact-form-button {
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 70px;
+    width: 50%;
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.contact-info {
+    margin-top: 80px;
+    padding-top: 80px;
+    margin-left: 150px;
+    color: purple;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 50%;
+    line-height: 1.5; /* Збільшуємо відстань між рядками */
+}
+.contact-title {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+

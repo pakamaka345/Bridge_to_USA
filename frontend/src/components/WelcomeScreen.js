@@ -18,15 +18,16 @@ export default function WelcomeScreen() {
     }, []);
 
     const style = {
-        transform: `translateY(${-scrollPosition * 3}px)`
+        transform: `translateY(${-scrollPosition }px)`,
+        transition: 'transform 0.3s ease-out'
     };
 
     return (
-        <div className='welcome-screen' style={style}>
+        <div className='welcome-screen' style={style} id='start-page'>
             <img src='/images/america-statue-of-liberty.gif' alt='America' className='welcome-screen img'/>
             <div className='welcome-text'>
-                <h1>Вітаємо вас на сайті!</h1>
-                <p>Ми надаємо допомогу у візах до США. Наша команда експертів забезпечить вам найкращий досвід та максимальні шанси на успіх.</p>
+                <h1>UNITING FOR UKRAINE</h1>
+                <p>В зв’язку з російською агресією в Україні 25 квітня 2022 року уряд США розпочав унікальну програму Uniting for Ukraine, яка дає можливість українцям приїжджати в Америку на тимчасове місце проживання з можливістю офіційно працювати.</p>
             </div>
         </div>
     );

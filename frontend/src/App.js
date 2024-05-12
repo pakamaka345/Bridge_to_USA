@@ -1,14 +1,18 @@
 import './App.css';
 import AmericanBar from './components/AmericanBar';
 import WelcomeScreen from './components/WelcomeScreen';
-import ShortServiceDescription from './components/ServiceDescription';
+import AboutUs from './components/AboutUs';
+import Services from './components/Services';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
     <div className="App">
       <AmericanBar/>
       <WelcomeScreen/>
-      <ShortServiceDescription/>
+      <AboutUs/>
+      <Services/>
+      <Contacts/>
     </div>
   );
 }

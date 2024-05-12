@@ -67,12 +67,15 @@
     height: 70px;
     width: 50%;
     background-color: purple;
+    transition: background-color 0.5s ease;
     color: white;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-
+.contact-form-button:disabled {
+    background-color: dimgray;
+}
 .contact-info {
     margin-top: 80px;
     padding-top: 80px;

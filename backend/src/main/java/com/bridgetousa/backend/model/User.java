@@ -28,7 +28,6 @@ public class User {
     @Column(length = 30)
     private String email;
 
-    @NotBlank(message = "Phone number is required")
     @Size(max = 20, message = "Phone number is too long")
     @Column(length = 20)
     private String phoneNumber;

@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@mui/material/Button';
+import { Link } from 'react-scroll';
 
 import './MainPage.css';
 
@@ -18,16 +20,19 @@ export default function WelcomeScreen() {
     }, []);
 
     const style = {
-        transform: `translateY(${-scrollPosition }px)`,
+        transform: `translateY(${-scrollPosition}px)`,
         transition: 'transform 0.3s ease-out'
     };
 
     return (
         <div className='welcome-screen' style={style} id='start-page'>
-            <img src='/images/america-statue-of-liberty.gif' alt='America' className='welcome-screen img'/>
+            <img src='/images/flags.png' alt='America' className='welcome-screen img'/>
             <div className='welcome-text'>
-                <h1>UNITING FOR UKRAINE</h1>
-                <p>В зв’язку з російською агресією в Україні 25 квітня 2022 року уряд США розпочав унікальну програму Uniting for Ukraine, яка дає можливість українцям приїжджати в Америку на тимчасове місце проживання з можливістю офіційно працювати.</p>
+                <h1 className='welcome-h'>UNITING FOR UKRAINE</h1>
+                <p className='welcome-p'>В зв’язку з російською агресією в Україні 25 квітня 2022 року уряд США розпочав унікальну програму Uniting for Ukraine, яка дає можливість українцям приїжджати в Америку на тимчасове місце проживання з можливістю офіційно працювати.</p>
+                <Button className='welcome-button'>
+                <Link activeClass='active' to='services' spy={true} offset={-15} duration={500}>ЯК ВІДБУВАЄТЬСЯ ПРОЦЕС</Link>
+                </Button>
             </div>
         </div>
     );

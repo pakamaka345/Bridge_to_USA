@@ -33,7 +33,7 @@ export default function ButtonAppBar() {
     <div className='mainDiv'>
       <div className='navDiv' ref={navRef}>
         <Toolbar className='toolBar'>
-          <Avatar alt="Ticket to America" src="/images/avatar.jpg" style={{height: '50px', width: '50px'}}/>
+          <Avatar alt="Ticket to America" src="/images/franklin.jpg" style={{height: '50px', width: '50px'}}/>
           <div>
             {isMatch ? (
               <>
@@ -60,13 +60,13 @@ export default function ButtonAppBar() {
                       <Button className='button' color="inherit"><Link activeClass='active' to='start-page' spy={true} offset={-15} duration={500}>Головна</Link></Button>
                     </ListItem>
                     <ListItem>
-                      <Button className='button' color="inherit"><Link activeClass='active' to='about-us' spy={true} offset={-15} duration={500}>Про нас</Link></Button>
+                      <Button className='button' color="inherit"><Link activeClass='active' to='about-us' spy={true} offset={-55} duration={500}>Про нас</Link></Button>
                     </ListItem>
                     <ListItem>
                       <Button className='button' color="inherit"><Link activeClass='active' to='visa' spy={true} offset={-15} duration={500}>Візи</Link></Button>
                     </ListItem>
                     <ListItem>
-                      <Button className='button' color="inherit"><Link activeClass='active' to='services' spy={true} offset={-15} duration={500}>Послуги</Link></Button>
+                      <Button className='button' color="inherit"><Link activeClass='active' to='services' spy={true} offset={-120} duration={500}>Послуги</Link></Button>
                     </ListItem>
                     <ListItem>
                       <Button className='button' color="inherit"><Link activeClass='active' to='reviews' spy={true} offset={-15} duration={500}>Відгуки</Link></Button>
@@ -96,7 +96,7 @@ export default function ButtonAppBar() {
                     to="about-us"
                     spy={true}
                     smooth={true}
-                    offset={-15}
+                    offset={-55}
                     duration={500}>
                       Про нас
                   </Link>
@@ -118,7 +118,7 @@ export default function ButtonAppBar() {
                     to="services"
                     spy={true}
                     smooth={true}
-                    offset={-15}
+                    offset={-120}
                     duration={500}>
                       Послуги
                   </Link>

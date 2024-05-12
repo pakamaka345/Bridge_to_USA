@@ -1,0 +1,43 @@
+.mainDiv {
+    position: fixed;
+    width: 100vw;
+    color: --dark-slate-blue;
+    z-index: 3;
+}
+.navDiv {
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    color: var(--dark-slate-blue);
+    background-color: rgba(241, 241, 241, 0.4);
+    border-radius: 10px;
+    width: 90%;
+    max-width: none;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, .15);
+}
+.navDiv:hover {
+    background-color: rgba(241, 241, 241, 1);
+
+}
+.toolBar {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: purple !important;
+    white-space: nowrap;
+}
+
+.button:hover {
+    font-style: italic;
+    text-decoration: underline 2px !important;
+    background-color: transparent !important;
+}

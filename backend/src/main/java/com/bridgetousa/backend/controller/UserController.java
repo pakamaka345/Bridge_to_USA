@@ -45,16 +45,13 @@ public class UserController {
                 .collect(Collectors.joining(", "));
     }
     private void validate(User user){
-        if (user.getName().isEmpty()) {
-            throw new IllegalArgumentException("Name is required");
+        if (user.getName().isEmpty() || user.getName().length() < 2 || user.getName().length() > 30) {
+            throw new IllegalArgumentException("Name is required or name is too short or too long");
         }
-        if (user.getEmail().isEmpty()) {
-            throw new IllegalArgumentException("Email is required");
-        }
-        if (!user.getEmail().matches("^[a-zA-Z0-9.,;:]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]$")) {
+        if (!user.getEmail().matches("^[a-zA-Z0-9.,;:]+@[a-zA-Z0-9.-]+\\.[a-zA-Z0-9.-]+$")) {
             throw new IllegalArgumentException("Email is invalid");
         }
-        if (user.getPhoneNumber().isEmpty()) {
+        if (!user.getPhoneNumber().matches("^\\+[0-9]+$") && !user.getPhoneNumber().isEmpty()) {
             throw new IllegalArgumentException("Phone number is required");
         }
     }

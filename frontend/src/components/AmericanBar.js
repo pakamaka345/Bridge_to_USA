@@ -72,7 +72,7 @@ export default function ButtonAppBar() {
                       <Button className='button' color="inherit"><Link activeClass='active' to='reviews' spy={true} offset={-15} duration={500}>Відгуки</Link></Button>
                     </ListItem>
                     <ListItem>
-                      <Button className='button' color="inherit"><Link activeClass='active' to='contacts' spy={true} offset={-15} duration={500}>Контакти</Link></Button>
+                      <Button className='button' color="inherit"><Link activeClass='active' to='contacts' spy={true} offset={0} duration={500}>Контакти</Link></Button>
                     </ListItem>
                   </List>
                 </Popover>
@@ -140,7 +140,7 @@ export default function ButtonAppBar() {
                     to="contacts"
                     spy={true}
                     smooth={true}
-                    offset={-15}
+                    offset={0}
                     duration={500}>
                       Контакти
                     </Link>

@@ -31,7 +31,7 @@ export default function WelcomeScreen() {
                 <h1 className='welcome-h'>UNITING FOR UKRAINE</h1>
                 <p className='welcome-p'>В зв’язку з російською агресією в Україні 25 квітня 2022 року уряд США розпочав унікальну програму Uniting for Ukraine, яка дає можливість українцям приїжджати в Америку на тимчасове місце проживання з можливістю офіційно працювати.</p>
                 <Button className='welcome-button'>
-                <Link activeClass='active' to='services' spy={true} offset={-15} duration={500}>ЯК ВІДБУВАЄТЬСЯ ПРОЦЕС</Link>
+                <Link activeClass='active' to='services' spy={true} offset={-120} duration={500}>ЯК ВІДБУВАЄТЬСЯ ПРОЦЕС</Link>
                 </Button>
             </div>
         </div>

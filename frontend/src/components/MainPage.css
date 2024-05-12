@@ -93,6 +93,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 150px;
 }
 
 .process-step-left, .process-step-right {
@@ -184,12 +185,9 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-<<<<<<< HEAD
-=======
 .contact-form-button:disabled {
     background-color: dimgray;
 }
->>>>>>> 4905e1a727fe79a45425dfbc3946d28508ccb4ed
 .contact-info {
     margin-top: 80px;
     padding-top: 80px;
@@ -202,8 +200,8 @@
     line-height: 1.5; /* Збільшуємо відстань між рядками */
 }
 .contact-title {
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-top: 60px;
 }
 
 

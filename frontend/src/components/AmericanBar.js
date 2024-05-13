@@ -63,13 +63,13 @@ export default function ButtonAppBar() {
                       <Button className='button' color="inherit"><Link activeClass='active' to='about-us' spy={true} offset={-55} duration={500}>Про нас</Link></Button>
                     </ListItem>
                     <ListItem>
+                      <Button className='button' color="inherit"><Link activeClass='active' to='services' spy={true} offset={-180} duration={500}>Послуги</Link></Button>
+                    </ListItem>
+                    <ListItem>
                       <Button className='button' color="inherit"><Link activeClass='active' to='visa' spy={true} offset={-15} duration={500}>Візи</Link></Button>
                     </ListItem>
                     <ListItem>
-                      <Button className='button' color="inherit"><Link activeClass='active' to='services' spy={true} offset={-120} duration={500}>Послуги</Link></Button>
-                    </ListItem>
-                    <ListItem>
-                      <Button className='button' color="inherit"><Link activeClass='active' to='reviews' spy={true} offset={-15} duration={500}>Відгуки</Link></Button>
+                      <Button className='button' color="inherit"><Link activeClass='active' to='reviews' spy={true} offset={-35} duration={500}>Відгуки</Link></Button>
                     </ListItem>
                     <ListItem>
                       <Button className='button' color="inherit"><Link activeClass='active' to='contacts' spy={true} offset={0} duration={500}>Контакти</Link></Button>
@@ -104,23 +104,23 @@ export default function ButtonAppBar() {
                 <Button className='button' color="inherit">
                   <Link
                     activeClass="active"
-                    to="visa"
+                    to="services"
                     spy={true}
                     smooth={true}
-                    offset={-15}
+                    offset={-180}
                     duration={500}>
-                      Візи
+                      Послуги
                   </Link>
                 </Button>
                 <Button className='button' color="inherit">
                   <Link
                     activeClass="active"
-                    to="services"
+                    to="visa"
                     spy={true}
                     smooth={true}
-                    offset={-120}
+                    offset={-100}
                     duration={500}>
-                      Послуги
+                      Візи
                   </Link>
                 </Button>
                 <Button className='button' color="inherit">
@@ -129,7 +129,7 @@ export default function ButtonAppBar() {
                     to="reviews"
                     spy={true}
                     smooth={true}
-                    offset={-15}
+                    offset={-35}
                     duration={500}>
                       Відгуки
                   </Link>

@@ -89,6 +89,10 @@
 
 
 
+body {
+    overflow-x: hidden;
+}
+
 #services {
     display: flex;
     flex-direction: column;
@@ -107,6 +111,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     font-size: 20px;
+    color: purple;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-weight: bold;
@@ -132,6 +137,71 @@
     opacity: 1;
 }
 
+
+.visa-container {
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.visa-container hr {
+    border: 1px solid purple;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+.visa-text h2 {
+    color: white;
+    background-color: rgb(116, 119, 88);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 50px;
+    line-height: 1.5;
+}
+.visa-text ul {
+    font-size: 24px;
+    color: rgb(157, 160, 128);
+    list-style-type: circle;
+    line-height: 1.5;
+    text-align: left; /* Вирівнює весь інший текст по лівому краю */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    width: 35%;
+}
+
+.visa-text ul ul {
+    margin-left:20px;
+    width: 100%;
+}
+
+.visa-text li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.visa-text > ul > li:first-child,
+.visa-text > ul > li:nth-child(2) {
+    color: rgb(37, 38, 24);
+    text-align: center; /* Вирівнює "ОДИНОЧНІ" та "ПАРНІ" по центру */
+}
+
+
+.process-name-bar {
+    background-color: rgb(255, 0, 128);
+    opacity: 0.8;
+    color: white;
+    font-size: 35px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .contact-form {
     background-color: #f8f9fa !important;

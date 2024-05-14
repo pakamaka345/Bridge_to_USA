@@ -38,7 +38,7 @@ export default function Services() {
     :
         {
             transform: `translateX(0)`,
-            transition: 'transform 1s ease-out'
+            transition: 'transform 0.8s ease-out'
         };
 
    /* const style = isMobile ? {} : {

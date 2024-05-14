@@ -394,12 +394,13 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-.gradient-text {
+.gradient-text_welcome, .gradient-text_contacts, .gradient-text_about-us {
     background: linear-gradient(45deg, darkred, darkorange, indigo, darkred);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
 }
-
-
+.gradient-text_about-us {
+    line-height: 1.5; /* Adjust this value as needed */
+}

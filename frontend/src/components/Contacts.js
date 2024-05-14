@@ -89,12 +89,20 @@ export default function ContactInfo() {
         return state;
     }
 
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const maxScrollPosition = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = (scrollPosition / maxScrollPosition) * 3000;
+        const textElement = document.querySelector('.gradient-text_contacts');
+        textElement.style.backgroundPosition = scrollPercentage*0.5 + '%';
+    }); // text gradient effect
+
     return (
         <Grid container id="contacts" >
             <Grid item xs={12} sm={6}>
                 <Box sx={{ width: '100%' }}>
                     <Box className='contact-info' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                        <h2 className='contact-title gradient-text'> ЗАЛИШИЛИСЬ ПИТАННЯ?</h2>
+                        <h2 className='contact-title gradient-text_contacts'> ЗАЛИШИЛИСЬ ПИТАННЯ?</h2>
                         <p className='contact-text'>Напишіть нам повідомлення. Наш менеджер відповість вам протягом робочого дня.</p>
                         <Button href='https://www.instagram.com/bridge_to_usa/'
                             target='_blank'

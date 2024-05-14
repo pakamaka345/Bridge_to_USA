@@ -101,7 +101,7 @@ export default function ContactInfo() {
                             className='contact-social-button'
                             rel='noopener'
                             startIcon={<InstagramIcon />}
-                            style={{ fontSize: '30px' }}>
+                            style={{ fontSize: '150%', borderRadius: '20px', border: '2px solid purple'}}>
                             Instagram
                         </Button>
                     </Box>

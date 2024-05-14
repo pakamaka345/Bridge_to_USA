@@ -9,7 +9,9 @@ export default function WelcomeScreen() {
 
     React.useEffect(() => {
         const handleScroll = () => {
-            setScrollPosition(window.scrollY);
+            if (window.innerWidth > 768) {
+                setScrollPosition(window.scrollY);
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -20,7 +22,7 @@ export default function WelcomeScreen() {
     }, []);
 
     const style = {
-        transform: `translateY(${-scrollPosition}px)`,
+        transform: window.innerWidth > 768 ? `translateY(${-scrollPosition}px)` : 'none',
         transition: 'transform 0.3s ease-out'
     };
 
@@ -31,7 +33,7 @@ export default function WelcomeScreen() {
                 <h1 className='welcome-h'>UNITING FOR UKRAINE</h1>
                 <p className='welcome-p'>В зв’язку з російською агресією в Україні 25 квітня 2022 року уряд США розпочав унікальну програму Uniting for Ukraine, яка дає можливість українцям приїжджати в Америку на тимчасове місце проживання з можливістю офіційно працювати.</p>
                 <Button className='welcome-button'>
-                <Link activeClass='active' to='services' spy={true} offset={-180} duration={500}>ЯК ВІДБУВАЄТЬСЯ ПРОЦЕС</Link>
+                <Link activeClass='active' to='services' spy={true} smooth={true} offset={-180} duration={500}>ЯК ВІДБУВАЄТЬСЯ ПРОЦЕС</Link>
                 </Button>
             </div>
         </div>

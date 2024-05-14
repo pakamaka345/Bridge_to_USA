@@ -19,18 +19,26 @@ export default function WelcomeScreen() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, []); // parallax effect
 
     const style = {
         transform: window.innerWidth > 768 ? `translateY(${-scrollPosition}px)` : 'none',
         transition: 'transform 0.3s ease-out'
-    };
+    }; // text gradient effect
+
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const maxScrollPosition = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = (scrollPosition / maxScrollPosition) * 3000;
+        const textElement = document.querySelector('.gradient-text');
+        textElement.style.backgroundPosition = scrollPercentage + '%';
+    });
 
     return (
         <div className='welcome-screen' style={style} id='start-page'>
             <img src='/images/flags.png' alt='America' className='welcome-screen img'/>
             <div className='welcome-text'>
-                <h1 className='welcome-h'>UNITING FOR UKRAINE</h1>
+                <h1 className='welcome-h gradient-text'>UNITING FOR UKRAINE</h1>
                 <p className='welcome-p'>В зв’язку з російською агресією в Україні 25 квітня 2022 року уряд США розпочав унікальну програму Uniting for Ukraine, яка дає можливість українцям приїжджати в Америку на тимчасове місце проживання з можливістю офіційно працювати.</p>
                 <Button className='welcome-button'>
                 <Link activeClass='active' to='services' spy={true} smooth={true} offset={-180} duration={500}>ЯК ВІДБУВАЄТЬСЯ ПРОЦЕС</Link>

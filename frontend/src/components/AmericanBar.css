@@ -37,7 +37,7 @@
 }
 
 .button:hover {
-    font-style: italic;
+    font-weight: bold !important;
     text-decoration: underline 2px !important;
     background-color: transparent !important;
 }

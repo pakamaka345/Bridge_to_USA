@@ -32,39 +32,39 @@ export default function ContactInfo() {
     async function SendButtonClicked(e) {
         e.preventDefault(); //prevent page refresh
 
-        if(!validateUserData()) return;
+        if (!validateUserData()) return;
 
         setNameEntryError(false); setEmailEntryError(false); setPhoneEntryError(false);
 
         //TODO encrypt data implementation
 
-        const data = {name, email, phoneNumber, telegram, message };
+        const data = { name, email, phoneNumber, telegram, message };
         setButtonDisabled(true);
 
 
         console.log(data)
         fetch('http://localhost:8080/connectWithUs/send', {
             method: 'POST',
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         })
             .then((response) => {
-            console.log("HTTP status code:", response.status);
+                console.log("HTTP status code:", response.status);
 
-            if (response.ok) {
-                console.log("New Student added");
-                alert("New Student added successfully");
-            }
-            else {
-                throw new Error('HTTP error, status = ' + response.status);
+                if (response.ok) {
+                    console.log("New Student added");
+                    alert("New Student added successfully");
+                }
+                else {
+                    throw new Error('HTTP error, status = ' + response.status);
 
-            }
-        })
+                }
+            })
             .catch((error) => {
-            console.error('Fetch failed:', error);
-            alert('Failed to add new student');
-            setButtonDisabled(false); // re-enable the button if the request failed
-        });
+                console.error('Fetch failed:', error);
+                alert('Failed to add new student');
+                setButtonDisabled(false); // re-enable the button if the request failed
+            });
     }
 
     function validateUserData() {
@@ -72,19 +72,19 @@ export default function ContactInfo() {
         if (name === '' || name.length < 2 || name.length > 30) {
             alert("Name is required and must be between 2 and 30 characters");
             setNameEntryError(true);
-            state=false;
+            state = false;
         }
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(email)) {
             alert("Valid Email is required");
             setEmailEntryError(true);
-            state=false;
+            state = false;
         }
         const phoneRegex = /^\+[0-9]{10,15}$/;
         if (!phoneRegex.test(phoneNumber) && phoneNumber !== '') { //phone number is optional, but we will check it if it is entered
             alert("Valid Phone Number is required");
             setPhoneEntryError(true);
-            state=false;
+            state = false;
         }
         return state;
     }
@@ -93,7 +93,7 @@ export default function ContactInfo() {
         <Grid container id="contacts" >
             <Grid item xs={12} sm={6}>
                 <Box sx={{ width: '100%' }}>
-                    <Box className='contact-info'>
+                    <Box className='contact-info' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <h2 className='contact-title'> ЗАЛИШИЛИСЬ ПИТАННЯ?</h2>
                         <p className='contact-text'>Напишіть нам повідомлення. Наш менеджер відповість вам протягом робочого дня.</p>
                         <Button href='https://www.instagram.com/bridge_to_usa/'
@@ -101,7 +101,7 @@ export default function ContactInfo() {
                             className='contact-social-button'
                             rel='noopener'
                             startIcon={<InstagramIcon />}
-                            style={{ fontSize: '150%', borderRadius: '20px', border: '2px solid purple'}}>
+                            style={{ fontSize: '150%', borderRadius: '20px', border: '2px solid purple' }}>
                             Instagram
                         </Button>
                     </Box>
@@ -126,7 +126,7 @@ export default function ContactInfo() {
                                     FormHelperTextProps={{ className: 'helper-text' }}
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    //inputRef={NameEntryRef}
+                                //inputRef={NameEntryRef}
                                 />
                                 <TextField
                                     id="EmailEntry"
@@ -137,7 +137,7 @@ export default function ContactInfo() {
                                     FormHelperTextProps={{ className: 'helper-text' }}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    //inputRef={EmailEntryRef}
+                                //inputRef={EmailEntryRef}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -150,7 +150,7 @@ export default function ContactInfo() {
                                     FormHelperTextProps={{ className: 'helper-text' }}
                                     value={phoneNumber}
                                     onChange={(e) => setPhone(e.target.value)}
-                                    //inputRef={PhoneEntryRef}
+                                //inputRef={PhoneEntryRef}
                                 />
                                 <TextField
                                     id="TelegramEntry"
@@ -160,7 +160,7 @@ export default function ContactInfo() {
                                     FormHelperTextProps={{ className: 'helper-text' }}
                                     value={telegram}
                                     onChange={(e) => setTelegram(e.target.value)}
-                                    //inputRef={TelegramEntryRef}
+                                //inputRef={TelegramEntryRef}
                                 />
                             </Grid>
                             <Grid item xs={12}>
@@ -172,7 +172,7 @@ export default function ContactInfo() {
                                     FormHelperTextProps={{ className: 'helper-textarea' }}
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
-                                    //inputRef={MessageEntryRef}
+                                //inputRef={MessageEntryRef}
                                 />
                             </Grid>
                         </Grid>

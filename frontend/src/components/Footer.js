@@ -12,7 +12,7 @@ export default function Footer() {
         // Mobile version
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
           <img src={"images/logo.png"} alt="Logo" style={{ height: '80px', marginTop: "20px" }} />
-          <Button className='button' color="inherit" style={{ marginLeft: 'auto', fontWeight: 'bold' }}>
+          <Button className='button' color="inherit" style={{ marginLeft: '0px', fontWeight: 'bold' }}>
             <Link
               activeClass="active"
               to="start-page"

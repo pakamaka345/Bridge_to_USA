@@ -55,7 +55,7 @@ export default function Reviews() {
                     color="primary"
                     href="https://www.instagram.com/bridge_to_usa/"
                     target="_blank"
-                    style={{ marginBottom: "3%", marginTop: "10%", backgroundColor: "purple", borderRadius: "30px", padding: "1% 30%", fontSize: "200%"}}
+                    style={{ marginBottom: "3%", marginTop: "10%", backgroundColor: "purple", borderRadius: "30px", padding: "1% 30%", fontSize: "150%"}}
                 >
                     БІЛЬШЕ ВІДГУКІВ
                 </Button>

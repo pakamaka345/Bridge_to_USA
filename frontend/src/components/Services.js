@@ -9,6 +9,7 @@ export default function Services() {
     React.useEffect(() => {
         const handleScroll = () => {
             setScrollPosition(window.scrollY);
+            console.log(scrollPosition);
         };
 
         const handleResize = () => {
@@ -29,11 +30,21 @@ export default function Services() {
     } else {
         translateValue = 375;
     }
+    const style = isMobile ? {} : (scrollPosition < 1190 || scrollPosition > 1790) ? //center = 1490 up = 1090 down = 1790
+        {
+            transform: `translateX(${-scrollPosition * 0.249 + translateValue}%)`,
+            transition: 'transform 7s ease-out'
+        }
+    :
+        {
+            transform: `translateX(0)`,
+            transition: 'transform 1s ease-out'
+        };
 
-    const style = isMobile ? {} : {
-        transform: `translateX(${-scrollPosition * 0.3 + translateValue}px)`,
-        transition: 'transform 0.3s ease-out'
-    };
+   /* const style = isMobile ? {} : {
+        transform: `translateX(0)%`,
+        transition: 'transform 0.5s ease-out'
+    };*/
 
     const mobileScrollValues = [ 1450, 1650, 1850, 2050, 2250, 2450]  // Change these values as per your requirement for mobile
     const desktopScrollValues = [1050, 1150, 1350, 1550, 1750, 1950]; // Change these values as per your requirement for desktop

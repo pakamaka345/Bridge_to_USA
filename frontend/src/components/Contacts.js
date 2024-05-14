@@ -94,7 +94,7 @@ export default function ContactInfo() {
             <Grid item xs={12} sm={6}>
                 <Box sx={{ width: '100%' }}>
                     <Box className='contact-info' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                        <h2 className='contact-title'> ЗАЛИШИЛИСЬ ПИТАННЯ?</h2>
+                        <h2 className='contact-title gradient-text'> ЗАЛИШИЛИСЬ ПИТАННЯ?</h2>
                         <p className='contact-text'>Напишіть нам повідомлення. Наш менеджер відповість вам протягом робочого дня.</p>
                         <Button href='https://www.instagram.com/bridge_to_usa/'
                             target='_blank'

@@ -24,7 +24,7 @@ export default function WelcomeScreen() {
     const style = {
         transform: window.innerWidth > 768 ? `translateY(${-scrollPosition}px)` : 'none',
         transition: 'transform 0.3s ease-out'
-    }; // text gradient effect
+    };
 
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
@@ -32,7 +32,7 @@ export default function WelcomeScreen() {
         const scrollPercentage = (scrollPosition / maxScrollPosition) * 3000;
         const textElement = document.querySelector('.gradient-text');
         textElement.style.backgroundPosition = scrollPercentage + '%';
-    });
+    }); // text gradient effect
 
     return (
         <div className='welcome-screen' style={style} id='start-page'>

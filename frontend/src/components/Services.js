@@ -35,7 +35,7 @@ export default function Services() {
         transition: 'transform 0.3s ease-out'
     };
 
-    const mobileScrollValues = [ 1400, 1600, 1800, 2000, 2200, 2400]  // Change these values as per your requirement for mobile
+    const mobileScrollValues = [ 1450, 1650, 1850, 2050, 2250, 2450]  // Change these values as per your requirement for mobile
     const desktopScrollValues = [1050, 1150, 1350, 1550, 1750, 1950]; // Change these values as per your requirement for desktop
 
     return (

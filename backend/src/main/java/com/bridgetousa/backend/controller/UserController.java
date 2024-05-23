@@ -37,13 +37,6 @@ public class UserController {
         userService.saveUser(user);
         return "Getting info about new user successfully!";
     }
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public String handleValidationExceptions(MethodArgumentNotValidException ex) {
-        return ex.getBindingResult().getAllErrors().stream()
-                .map(ObjectError::getDefaultMessage)
-                .collect(Collectors.joining(", "));
-    }
     private void validate(User user){
         if (user.getName().isEmpty() || user.getName().length() < 2 || user.getName().length() > 30) {
             throw new IllegalArgumentException("Name is required or name is too short or too long");

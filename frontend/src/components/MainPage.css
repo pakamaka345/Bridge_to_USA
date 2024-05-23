@@ -151,7 +151,7 @@ body {
         margin-right: 10px;
     }
     .about-us-image img {
-        height: 25%; /* зберігаємо пропорції зображення */
+        height: 25% !important;
         margin-bottom: -30%;
     }
 }

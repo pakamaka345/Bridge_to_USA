@@ -4,6 +4,8 @@ import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import emailjs from 'emailjs-com';
 
 import './MainPage.css';
 import { Button } from '@mui/material';
@@ -89,12 +91,12 @@ export default function ContactInfo() {
         return state;
     }
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
         const maxScrollPosition = document.body.scrollHeight - window.innerHeight;
         const scrollPercentage = (scrollPosition / maxScrollPosition) * 3000;
         const textElement = document.querySelector('.gradient-text_contacts');
-        textElement.style.backgroundPosition = scrollPercentage*0.5 + '%';
+        textElement.style.backgroundPosition = scrollPercentage * 0.5 + '%';
     }); // text gradient effect
 
     return (
@@ -104,14 +106,26 @@ export default function ContactInfo() {
                     <Box className='contact-info' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <h2 className='contact-title gradient-text_contacts'> ЗАЛИШИЛИСЬ ПИТАННЯ?</h2>
                         <p className='contact-text'>Напишіть нам повідомлення. Наш менеджер відповість вам протягом робочого дня.</p>
-                        <Button href='https://www.instagram.com/bridge_to_usa/'
-                            target='_blank'
-                            className='contact-social-button'
-                            rel='noopener'
-                            startIcon={<InstagramIcon />}
-                            style={{ fontSize: '150%', borderRadius: '20px', border: '2px solid purple' }}>
-                            Instagram
-                        </Button>
+                        <Box display="flex" flexDirection="row" justifyContent="space-between" marginLeft='5%' marginRight='5%'>
+                            <Button href='https://www.instagram.com/bridge_to_usa/'
+                                target='_blank'
+                                className='contact-social-button'
+                                rel='noopener'
+                                startIcon={<InstagramIcon style={{ fontSize: 100, marginLeft: '6%' }} />}
+                                style={{ borderRadius: '20px', border: '2px solid purple', marginRight: '5%' }}
+                                justifyContent="center"
+                                alignItems="center">
+                            </Button>
+                            <Button href='https://t.me/bridgetousa'
+                                target='_blank'
+                                className='contact-social-button'
+                                rel='noopener'
+                                startIcon={<TelegramIcon style={{ fontSize: 100, marginLeft: '3%' }} />}
+                                style={{ borderRadius: '20px', border: '2px solid purple' }}
+                                justifyContent="center"
+                                alignItems="center">
+                            </Button>
+                        </Box>
                     </Box>
                 </Box>
             </Grid>
